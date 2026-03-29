@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="AmmiyV0NC_eU93Y4wyM-mqAp2mHIKtBgtAn2COcLej4" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheAbdoInc | ZBlock Crush - Early Access</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --secondary: #9d50bb;
+            --dark: #0f0c29;
+            --text: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated Background Effect */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+            opacity: 0.1;
+            animation: moveBackground 50s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes moveBackground {
+            from { transform: translate(0, 0); }
+            to { transform: translate(-50%, -50%); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .brand {
+            font-weight: 800;
+            letter-spacing: 5px;
+            margin-bottom: 2.5rem;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .brand span { color: var(--primary); text-shadow: 0 0 15px rgba(0, 210, 255, 0.5); }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(0, 210, 255, 0.1);
+            border: 1px solid var(--primary);
+            border-radius: 50px;
+            font-size: 0.7rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: pulse 2s infinite;
+        }
+
+        .game-title {
+            font-size: clamp(2.5rem, 10vw, 5rem);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .game-title .white { color: #fff; display: block; }
+        .game-title .gradient {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+        }
+
+        .description {
+            font-size: 1rem;
+            font-weight: 300;
+            opacity: 0.8;
+            margin: 0 auto 2.5rem auto;
+            max-width: 500px;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 18px 45px;
+            background: var(--primary);
+            color: #000;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1rem;
+            border-radius: 50px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 25px rgba(0, 210, 255, 0.3);
+            text-transform: uppercase;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 210, 255, 0.5);
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .social-links {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.8rem;
+            opacity: 0.5;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .social-links a:hover {
+            opacity: 1;
+            color: var(--primary);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 210, 255, 0.4); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(0, 210, 255, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 210, 255, 0); }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.7rem;
+            opacity: 0.3;
+            width: 100%;
+            text-align: center;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    
+    <main class="container">
+        <header>
+            <h2 class="brand">THE<span>ABDO</span>INC</h2>
+        </header>
+
+        <section>
+            <div class="badge">Play Test Now Available</div>
+            <h1 class="game-title">
+                <span class="white">ZBLOCK</span>
+                <span class="gradient">CRUSH</span>
+            </h1>
+            <p class="description">
+                Download the early access build now and help us shape the future of block-crushing strategy.
+            </p>
+            
+            <a href="zblockcrushbeta.apk" class="btn-primary" download="ZBlockCrushBeta.apk">
+                Download APK
+            </a>
+            
+            <div class="social-links">
+                <a href="https://www.instagram.com/theabdo.inc/" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.youtube.com/@Mpixt" target="_blank" rel="noopener">YouTube</a>
+                <a href="#" target="_blank" rel="noopener">Discord</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 TheAbdoInc. All rights reserved.</p>
+        </footer>
+    </main>
+
+</body>
+</html>
